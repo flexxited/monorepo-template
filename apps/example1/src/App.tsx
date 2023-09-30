@@ -2,9 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
-function App () {
+function App() {
   const [count, setCount] = useState(0)
-
+  console.log("Hello");
   return (
     <div className="App">
       <div className='flex justify-center items-center'>
@@ -25,6 +25,7 @@ function App () {
         </a>
       </div>
       <h1>Vite + React 18 + TS + TailwindCSS + ESLint</h1>
+      <h1>Example1</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
