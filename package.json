@@ -1,0 +1,15 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "example1": "lerna run dev --scope example1",
+    "example2": "lerna run dev --scope example2"
+  },
+  "devDependencies": {
+    "lerna": "^6.0.1"
+  }
+}
