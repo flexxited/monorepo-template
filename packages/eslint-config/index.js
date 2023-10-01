@@ -1,10 +1,8 @@
 module.exports = {
   env: {
-    browser: true,
-    commonjs: true,
     node: true,
+    browser: true,
     es2021: true,
-    es6: true,
   },
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -20,17 +18,16 @@ module.exports = {
     React: true,
     JSX: true,
   },
+
   rules: {
     "prettier/prettier": "error",
-    "no-unused-vars": "off",
-    "react/no-children-prop": "off",
-    "@typescript-eslint/no-unused-vars": "error",
     "prettier/prettier": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "react/no-children-prop": "off",
     "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [
-      1,
-      { extensions: [".js", ".jsx", ".ts", ".tsx"] },
-    ],
+    "react/jsx-filename-extension": "off",
+    "react/no-unknown-property": ["error", { ignore: ["svg"] }],
     curly: ["error", "all"],
     "no-console": ["error", { allow: ["error"] }],
     "import/extensions": [
@@ -44,5 +41,10 @@ module.exports = {
         tsx: "never",
       },
     ],
+  },
+  settings: {
+    react: {
+      version: "detect",
+    },
   },
 };

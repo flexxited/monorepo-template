@@ -5,14 +5,26 @@
     "apps/*",
     "packages/*"
   ],
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "npm run lint:eslint:fix",
+      "prettier --write"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
+  },
   "scripts": {
     "example1": "lerna run dev --scope example1",
     "example2": "lerna run dev --scope example2",
-    "lint:eslint:fix": "eslint --fix",
+    "lint:eslint:fix": "eslint --ignore-path .eslintignore --fix **/*.{js,jsx,ts,tsx}",
     "prettier": "prettier --write \"**/*.{ts,tsx,md,svelte,js,json,yaml}\"",
-    "prettier-check": "prettier --plugin-search-dir . --check ."
+    "prettier-check": "prettier --plugin-search-dir . --check .",
+    "prepare": "husky install"
   },
   "devDependencies": {
-    "lerna": "^6.0.1"
+    "husky": "^8.0.0",
+    "lerna": "^6.0.1",
+    "lint-staged": "^14.0.1"
   }
 }
