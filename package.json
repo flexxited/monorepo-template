@@ -7,7 +7,10 @@
   ],
   "scripts": {
     "example1": "lerna run dev --scope example1",
-    "example2": "lerna run dev --scope example2"
+    "example2": "lerna run dev --scope example2",
+    "lint:eslint:fix": "eslint --fix",
+    "prettier": "prettier --write \"**/*.{ts,tsx,md,svelte,js,json,yaml}\"",
+    "prettier-check": "prettier --plugin-search-dir . --check ."
   },
   "devDependencies": {
     "lerna": "^6.0.1"
